@@ -405,6 +405,7 @@ body.active { overflow: hidden; }
 .navbar.active {
   height: 236px;
   visibility: visible;
+  text-align: center;
 }
 
 .navbar-list { margin-block: 10px; }
@@ -1260,11 +1261,107 @@ textarea.input-field {
  * responsive for larger than 550px screen
  */
 
+ @media (max-width: 320px) {
+
+  /**
+   * REUSED STYLE
+   */
+   .header {
+    --color: var(--white);
+    --btn-color: var(--champagne-pink);
+  
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+  width: 107% !important;
+    padding-block: 20px !important;
+    border-block-end: 1px solid var(--champagne-pink_20);
+    z-index: 4;
+  }
+  
+  
+  .header.active {
+    --color: var(--rich-black-fogra-29);
+    --btn-color: var(--rich-black-fogra-29);
+  
+    position: fixed;
+    top: -129px !important;
+    background-color: var(--white);
+    box-shadow: var(--shadow-1);
+    animation: slideIn 0.5s ease-out forwards;
+  }
+  
+  @keyframes slideIn {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100%); }
+  }
+  
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .container {
+    max-width: 550px !important;
+    width: 95% !important;
+    margin-inline: auto;
+  }
+}
+
+ @media (max-width: 425px) {
+
+  /**
+   * REUSED STYLE
+   */
+   .header {
+    --color: var(--white);
+    --btn-color: var(--champagne-pink);
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-block: 20px;
+    border-block-end: 1px solid var(--champagne-pink_20);
+    z-index: 4;
+  }
+  
+  .header.active {
+    --color: var(--rich-black-fogra-29);
+    --btn-color: var(--rich-black-fogra-29);
+  
+    position: fixed;
+    top: -131px;
+    background-color: var(--white);
+    box-shadow: var(--shadow-1);
+    animation: slideIn 0.5s ease-out forwards;
+  }
+  
+  @keyframes slideIn {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100%); }
+  }
+  
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .container {
+    max-width: 550px;
+    width: 91%;
+    margin-inline: auto;
+  }
+}
+
 @media (min-width: 550px) {
 
   /**
    * REUSED STYLE
    */
+   
 
   .container {
     max-width: 550px;
