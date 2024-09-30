@@ -1270,10 +1270,10 @@ textarea.input-field {
     --color: var(--white);
     --btn-color: var(--champagne-pink);
   
-    position: absolute !important;
+    position: fixed !important;
     top: 0 !important;
     left: 0 !important;
-  width: 107% !important;
+  width: 90% !important;
     padding-block: 20px !important;
     border-block-end: 1px solid var(--champagne-pink_20);
     z-index: 4;
@@ -1304,7 +1304,7 @@ textarea.input-field {
 
   .container {
     max-width: 550px !important;
-    width: 95% !important;
+    width: 103% !important;
     margin-inline: auto;
   }
 }
